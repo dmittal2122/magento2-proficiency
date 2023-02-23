@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<geoip>
+			<geoip>
+				<api_url>https://api.apilayer.com/ip_to_location</api_url>
+				<token>Md3c8wNweYxezatkN0HRPM1DQJCb5Js2</token>
+			</geoip>
+		</geoip>
+	</default>
+</config>

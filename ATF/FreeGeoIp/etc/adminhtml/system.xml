@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="geoip" translate="label" sortOrder="999">
+			<label>Free Geoip</label>
+		</tab>
+		<section id="geoip" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>Free Geoip</label>
+			<tab>general</tab>
+			<resource>ATF_FreeGeoIp::config_atf_exchangerate</resource>
+			<group id="geoip" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Geoip</label>
+				<field id="api_url" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>api_url</label>
+				</field>
+				<field id="token" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>token</label>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
