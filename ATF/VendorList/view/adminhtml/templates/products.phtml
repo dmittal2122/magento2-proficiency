@@ -1,0 +1,6 @@
+<?php
+    $products = $block->execute();
+    foreach ($products as $product){
+?>
+    <div><?= $product['value']; ?></br></div>
+<?php } ?>

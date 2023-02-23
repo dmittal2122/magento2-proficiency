@@ -1,0 +1,11 @@
+<div>
+    <h3><?php echo __('Vendors:'); ?></h3>
+	    <?php
+            $vendors =   $block->execute();
+            if(!empty($vendors)){
+                foreach ($vendors as $vendor){
+          ?>
+                <div><?= isset($vendor['name']) ? $vendor['name']: ''; ?></div>
+            <?php } }
+            ?>
+</div>

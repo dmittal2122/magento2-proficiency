@@ -1,0 +1,27 @@
+{
+    "atf_vendor": {
+        "column": {
+            "vendor_id": true,
+            "name": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "atf_vendor2product": {
+        "column": {
+            "id": true,
+            "parent_id": true,
+            "product_id": true
+        },
+        "index": {
+            "ATF_VENDOR2PRODUCT_PARENT_ID": true,
+            "ATF_VENDOR2PRODUCT_PRODUCT_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "ATF_VENDOR2PRODUCT_PARENT_ID_ATF_VENDOR_VENDOR_ID": true,
+            "ATF_VENDOR2PRODUCT_PRODUCT_ID_CATALOG_PRODUCT_ENTITY_ENTITY_ID": true
+        }
+    }
+}

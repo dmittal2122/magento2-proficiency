@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="ATF::top_level" title="ATF" module="ATF_VendorList" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="ATF_VendorList::atf_vendorlist_vendor" title="Vendor" module="ATF_VendorList" sortOrder="9999" resource="Magento_Backend::content" parent="ATF::top_level" action="atf_vendorlist/vendor/index"/>
+	</menu>
+</config>

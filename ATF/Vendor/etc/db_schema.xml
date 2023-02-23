@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="atf_vendor" resource="default" engine="innodb" comment="Atf Vendor Table">
+		<column xsi:type="int" name="vendor_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Vendor Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="vendor_id"/>
+		</constraint>
+		<column name="name" nullable="false" xsi:type="text" comment="name"/>
+	</table>
+
+    <table name="atf_vendor2product" resource="default" engine="innodb" comment="Atf Vendor Product Table">
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <column name="parent_id" unsigned="true" nullable="false" xsi:type="int" comment="parent id link to vendor id"/>
+        <column name="product_id" unsigned="true" nullable="false" xsi:type="int" comment="product id link to catalog product entity"/>
+        <constraint xsi:type="foreign" referenceId="ATF_VENDOR_PRODUCT_ENTITY_PARENT_ID_ATF_VENDOR_ENTITY_VENDOR_ID"
+                    table="atf_vendor2product" column="parent_id" referenceTable="atf_vendor"
+                    referenceColumn="vendor_id" onDelete="CASCADE"/>
+        <index referenceId="ATF_VENDOR_PRODUCT_ENTITY_PARENT_ID" indexType="btree">
+            <column name="parent_id"/>
+        </index>
+        <constraint xsi:type="foreign" referenceId="ATF_VENDOR_PRODUCT_ENTITY_PRODUCT_ID_CATALOG_PRODUCT_ENTITY_ENTITY_ID"
+                    table="atf_vendor2product" column="product_id" referenceTable="catalog_product_entity"
+                    referenceColumn="entity_id" onDelete="CASCADE"/>
+        <index referenceId="ATF_VENDOR_PRODUCT_ENTITY_PRODUCT_ID" indexType="btree">
+            <column name="product_id"/>
+        </index>
+    </table>
+</schema>
