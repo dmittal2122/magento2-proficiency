@@ -1,0 +1,27 @@
+<div>
+	<?= __('Exchange rate between the euro and the US dollar : ') ?>
+    <span id="exchage_rate"></span>
+</div>
+
+<script type="text/javascript">
+    require(["jquery"],function($) {
+        $(document).ready(function() {
+            var exchangeApiUrl = "<?php echo $this->getUrl().'rest/V1/atf-exchangerate/exchangerate'?>";
+            $.ajax({
+                url: exchangeApiUrl,
+                type: 'GET',
+                dataType: 'json',
+                contentType: "application/json",
+                cache: false,
+                success: function(response) {
+                     data = $.parseJSON(response);
+                     if(data.success){
+                         $("#exchage_rate").html(data.result);
+                     }else{
+                         $("#exchage_rate").html(data.message)
+                     }
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="exchangerate" translate="label" sortOrder="999">
+			<label>Exchange Rate</label>
+		</tab>
+		<section id="exchangerate" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>Exchange Rateda</label>
+			<tab>general</tab>
+			<resource>ATF_ExchangeRate::config_atf_exchangerate</resource>
+			<group id="exchangerate" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>exchangerate</label>
+				<field id="api_url" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>api_url</label>
+				</field>
+				<field id="token" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>token</label>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

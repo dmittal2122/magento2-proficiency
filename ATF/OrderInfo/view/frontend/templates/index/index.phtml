@@ -1,0 +1,19 @@
+<?php
+    $orderId = $block->getRequest()->getParam('id');
+    $helper = $this->helper('ATF\OrderInfo\Helper\Data');
+    $resposne = $helper->getOrderDetail($orderId);
+?>
+
+<h2><?= $block->escapeHtml(__('Order Detail')) ?></h2>
+<table style="width:100%">
+    <tr>
+        <th><?= $block->escapeHtml(__('Order Status')) ?></th>
+        <th><?= $block->escapeHtml(__('Order Total')) ?></th>
+        <th><?= $block->escapeHtml(__('Order Total Invoiced')) ?></th>
+    </tr>
+    <tr>
+        <td><?= $resposne['status'] ?></td>
+        <td><?= $resposne['total'] ?></td>
+        <td><?= $resposne['totalInvoice'] ?></td>
+    </tr>
+</table>

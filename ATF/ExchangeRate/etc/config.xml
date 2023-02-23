@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<exchangerate>
+			<exchangerate>
+				<api_url>https://api.apilayer.com/exchangerates_data/convert</api_url>
+				<token>Md3c8wNweYxezatkN0HRPM1DQJCb5Js2</token>
+			</exchangerate>
+		</exchangerate>
+	</default>
+</config>
